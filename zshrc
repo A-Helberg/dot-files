@@ -93,3 +93,6 @@ PERL_MB_OPT="--install_base \"/Users/andre/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/andre/perl5"; export PERL_MM_OPT;
 
 export PIP_REQUIRE_VIRTUALENV="" pip "$@"
+
+# Setup rbenv shell integration
+eval "$(rbenv init -)"
