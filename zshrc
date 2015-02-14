@@ -89,10 +89,38 @@ if which tmux 2>&1 >/dev/null; then
   fi
 fi
 
-PERL_MB_OPT="--install_base \"/Users/andre/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/andre/perl5"; export PERL_MM_OPT;
-
 export PIP_REQUIRE_VIRTUALENV="" pip "$@"
 
 # Setup rbenv shell integration
 eval "$(rbenv init -)"
+
+schedprompt() {
+    emulate -L zsh
+    zmodload -i zsh/sched
+    integer i=${"${(@)zsh_scheduled_events#*:*:}"[(I)schedprompt]}
+    (( i )) && sched -$i
+    zle && zle reset-prompt
+    sched +5 schedprompt
+}
+
+# Uncomment this line to refresh prompt periodically
+# schedprompt
+
+#Default git push to current branch
+function gpoc {
+    echo Pushing $(current_branch)
+    git push origin $(current_branch)
+}
+
+function gpr {
+    echo Opening pull request for $(current_branch)
+    repo=`git remote -v | head -1 | sed "s/git@github.com://" | sed "s,https://github.com/,," | cut -c8-999 | sed "s/\.git .*//"`
+    branch=""
+    if [ $1 ]; then
+        branch="$1...$(current_branch)"
+    else
+        branch=$(current_branch)
+    fi
+
+    open "https://github.com/$repo/compare/$branch?expand=1"
+}
