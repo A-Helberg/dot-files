@@ -1,1 +1,1 @@
-vim-pathogen/autoload/pathogen.vim
+/Users/am/Documents/Projects/dot-files/vim/vim-pathogen/autoload/pathogen.vim
