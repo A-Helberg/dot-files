@@ -10,12 +10,12 @@ ZSH_THEME_NVM_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg_bold[green]%}±%{$reset_color%}%{$fg_bold[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} ]"
 
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}😄%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[cyan]%}😃%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[magenta]%}😳%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_STAGED="%{$fg_bold[green]%}😌%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg_bold[yellow]%}😒%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}😒%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="😄 "
+ZSH_THEME_GIT_PROMPT_AHEAD="😃 "
+ZSH_THEME_GIT_PROMPT_BEHIND="😳 "
+ZSH_THEME_GIT_PROMPT_STAGED="😌 "
+ZSH_THEME_GIT_PROMPT_UNSTAGED="😒 "
+ZSH_THEME_GIT_PROMPT_UNTRACKED="😒 "
 
 bureau_git_branch () {
   ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
