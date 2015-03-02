@@ -9,7 +9,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT='1'
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="bureaucustom"
+ZSH_THEME="agnostercustom"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -123,4 +123,12 @@ function gpr {
     fi
 
     open "https://github.com/$repo/compare/$branch?expand=1"
+}
+
+pgserver() {
+    postgres -D /usr/local/var/postgres
+}
+
+subl() {
+    command subl .
 }
