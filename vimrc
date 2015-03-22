@@ -10,33 +10,35 @@ syntax on
 
 filetype plugin indent on
 
-set autoindent          " Auto indent
+set autoindent                                         " Auto indent
 set encoding=utf-8
 
-set expandtab           " Expand tabs to spaces
-set tabstop=2 shiftwidth=2 " Set tab and shift width to this number of spaces
+set expandtab                                          " Expand tabs to spaces
+set tabstop=2 shiftwidth=2                             " Set tab and shift width to this number of spaces
 
-set number              " Show line numbers
-set relativenumber                " show relative line numbers
-au InsertEnter * :set nu        " absolute line numbers in insert mode,
-au InsertLeave * :set rnu       " relative otherwise for easy movement
+set number                                             " Show line numbers
+set relativenumber                                     " show relative line numbers
+au InsertEnter * :set nu                               " absolute line numbers in insert mode,
+au InsertLeave * :set rnu                              " relative otherwise for easy movement
 
 set ruler
-set cursorline          " Highlight the current line
-set nowrap " Don't wrap lines
-set vb                            " Disable audio bell, enable visual bell
+set cursorline                                         " Highlight the current line
+set nowrap                                             " Don't wrap lines
+set vb                                                 " Disable audio bell, enable visual bell
 
-set incsearch                     "Show search as I type
-set hlsearch                      " highlight all search matches
+set incsearch                                          " Show search as I type
+set hlsearch                                           " highlight all search matches
 
-set scrolloff=5                   " Minimum lines below and above cursor§
-set laststatus=2                  " Always show statusbar
-set nocompatible                  " don't need to be compatible with old vim
-set showmatch                     " show bracket matches
-set ttimeoutlen=100               " decrease timeout for faster insert with 'O'
+set scrolloff=5                                        " Minimum lines below and above cursor§
+set laststatus=2                                       " Always show statusbar
+set nocompatible                                       " don't need to be compatible with old vim
+set showmatch                                          " show bracket matches
+set ttimeoutlen=100                                    " decrease timeout for faster insert with 'O'
 set list listchars=tab:»·,trail:·,extends:❯,precedes:❮ " show extra space characters
-set clipboard=unnamed             " use the system clipboard
-set nobackup                    " Do not keep a backup file
+set clipboard=unnamed                                  " use the system clipboard
+set nobackup                                           " Do not keep a backup file
+set backspace=indent,eol,start                         " Allow backspacing over everything in insert mode
+
 
 set showbreak=↪
 
