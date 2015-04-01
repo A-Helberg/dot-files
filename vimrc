@@ -79,5 +79,6 @@ if exists('+colorcolumn')
   set colorcolumn=80
 endif
 
+" Use Ctrl+n to open Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
