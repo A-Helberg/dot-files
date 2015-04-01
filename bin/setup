@@ -11,6 +11,12 @@ echo ""
 
 echo "==> Here we go..."
 
+echo "  > Update homebrew"
+brew update
+
+echo "  > Install the silver searcher"
+brew install the_silver_searcher
+
 echo "  > Pulling latest dot-files..."
 git pull &> /dev/null
 
