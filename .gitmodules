@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-systemd-syntax"]
 	path = vim/bundle/vim-systemd-syntax
 	url = git@github.com:Matt-Deacalion/vim-systemd-syntax.git
+[submodule "vim/bundle/haskell-vim"]
+	path = vim/bundle/haskell-vim
+	url = git@github.com:raichoo/haskell-vim.git
