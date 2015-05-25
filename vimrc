@@ -84,6 +84,8 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Use the_silver_searcher if available
 if executable('ag')
+  let g:ctrlp_working_path_mode = 'ra'
+
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
 
