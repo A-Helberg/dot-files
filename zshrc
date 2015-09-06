@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export LC_ALL=en_ZA.UTF-8
-export LANG=en_ZA.UTF-8
-
 # Virtualenv should not prepend the virtualenv, since we are displaying it in the right prompt in the custom theme below
 export VIRTUAL_ENV_DISABLE_PROMPT='1'
 
@@ -137,6 +134,11 @@ function gpr {
 # Shortcut to run Postgress
 pgserver() {
     postgres -D /usr/local/var/postgres
+}
+
+# Shortcut to run MySQL
+mysqlserver() {
+  mysql.server start
 }
 
 # Shortcut to open sublime
