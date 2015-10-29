@@ -146,3 +146,7 @@ subl() {
     command subl .
 }
 
+# search git commit messages
+gitgrep() {
+  git log --all --grep=$1
+}
