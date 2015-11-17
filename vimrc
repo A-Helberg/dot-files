@@ -38,6 +38,7 @@ set list listchars=tab:»·,trail:·,extends:❯,precedes:❮ " show extra space
 set clipboard=unnamed                                  " use the system clipboard
 set nobackup                                           " Do not keep a backup file
 set backspace=indent,eol,start                         " Allow backspacing over everything in insert mode
+set mouse=a                                            " Enable mouse in all modes
 
 
 set showbreak=↪
