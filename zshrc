@@ -4,6 +4,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Virtualenv should not prepend the virtualenv, since we are displaying it in the right prompt in the custom theme below
 export VIRTUAL_ENV_DISABLE_PROMPT='1'
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
