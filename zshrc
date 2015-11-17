@@ -153,3 +153,7 @@ subl() {
 gitgrep() {
   git log --all --grep=$1
 }
+
+gitclean() {
+  git remote prune origin
+}
