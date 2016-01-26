@@ -58,7 +58,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/lib/python2.7/site-packages:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+export PATH="/usr/local/sbin:/usr/local/lib/python2.7/site-packages:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH"
+# Run commands from your bin stubs!!!!!!
+export PATH="./bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
