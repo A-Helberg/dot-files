@@ -159,3 +159,6 @@ gitgrep() {
 gitclean() {
   git remote prune origin
 }
+
+alias em='/usr/local/bin/emacs'
+alias gti='git'
