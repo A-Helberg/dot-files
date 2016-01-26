@@ -125,7 +125,7 @@ function gploc {
 
 function gpr {
   echo Opening pull request for $(current_branch)
-  repo=`git remote -v | head -1 | sed "s/git@github.com://" | sed "s,https://github.com/,," | cut -c8-999 | sed "s/\.git .*//"`
+  repo=`git remote -v | ag "origin.+push" | sed "s/git@github.com://" | sed "s,https://github.com/,," | cut -c8-999 | sed "s/\.git .*//"`
   branch=""
   if [ $1 ]; then
     branch="$1...$(current_branch)"
