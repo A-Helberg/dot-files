@@ -1,4 +1,4 @@
-;;; Custom-theme.el --- Emacs theme with a dark background.
+;;; andre-theme.el --- Emacs theme with a dark background.
 
 ;; Copyright (C) 2014 , Andre Helberg
 
@@ -28,7 +28,7 @@
 
 ;;; Code:
 
- (deftheme Custom)
+ (deftheme andre)
  (let ((class '((class color) (min-colors 89)))
        (fg1 "#EEEEEC")
        (fg2 "#d9d9d7")
@@ -41,22 +41,25 @@
        (key2 "#d6a2dd")
        (key3 "#b885bf")
        (builtin "#EEEEEC")
-       (keyword "#D197D9")
+       (keyword "#C2E075")
        (const   "#BED6FF")
        (comment "#535353")
        (func    "#6C99BB")
        (str     "#A5C261")
        (type    "#FFC66D")
        (var     "#D25252")
-       (warning "#F00C0C"))
+       (warning "#F00C0C")
+       (cyanbright "#DCF4FF"))
    (custom-theme-set-faces
-   'Custom
+   'andre
         `(default ((,class (:background ,bg1 :foreground ,fg1))))
+        ;; Powerline
+        `(powerline-inactive1 ((,class (:foreground ,cyanbright))))
         `(font-lock-builtin-face ((,class (:foreground ,builtin))))
         `(font-lock-comment-face ((,class (:foreground ,comment))))
-	`(font-lock-negation-char-face ((,class (:foreground ,const))))
-	`(font-lock-reference-face ((,class (:foreground ,const))))
-	`(font-lock-constant-face ((,class (:foreground ,const))))
+        `(font-lock-negation-char-face ((,class (:foreground ,const))))
+        `(font-lock-reference-face ((,class (:foreground ,const))))
+        `(font-lock-constant-face ((,class (:foreground ,const))))
         `(font-lock-doc-face ((,class (:foreground ,comment))))
         `(font-lock-function-name-face ((,class (:foreground ,func :bold t))))
         `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword))))
@@ -246,10 +249,10 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'Custom)
+(provide-theme 'andre)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; Custom-theme.el ends here
+;;; andre-theme.el ends here
