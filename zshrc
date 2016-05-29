@@ -6,6 +6,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT='1'
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+export GOPATH=~/GOPATH
+export PATH="$GOPATH/bin:$PATH"
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
