@@ -29,10 +29,10 @@ set vb                                                 " Disable audio bell, ena
 set incsearch                                          " Show search as I type
 set hlsearch                                           " highlight all search matches
 
-set scrolloff=5                                        " Minimum lines below and above cursor§
+set scrolloff=5                                        " Minimum lines below and above cursor
 set laststatus=2                                       " Always show statusbar
 set nocompatible                                       " don't need to be compatible with old vim
-set showmatch                                          " show bracket matches
+set showmatch                                          " show bracket matches { }
 set ttimeoutlen=100                                    " decrease timeout for faster insert with 'O'
 set list listchars=tab:»·,trail:·,extends:❯,precedes:❮ " show extra space characters
 set clipboard=unnamed                                  " use the system clipboard
