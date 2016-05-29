@@ -168,3 +168,4 @@ alias bubble='bundle'
 alias gm='git commit -m '
 
 
+nvm use 5
