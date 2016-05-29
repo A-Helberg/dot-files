@@ -42,6 +42,7 @@ values."
      typography
      restclient
      colors
+     osx
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -54,7 +55,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(minitest)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -111,12 +112,13 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(andre)
+   dotspacemacs-themes '(andre
+                         solarized-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Monaco for Powerline"
+   dotspacemacs-default-font '("Sourcecode Pro"
                                :size 12
                                :weight normal
                                :width normal
@@ -254,6 +256,7 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  (setq js-indent-level 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -268,7 +271,7 @@ layers configuration. You are free to put any user code."
  '(compilation-message-face (quote default))
  '(custom-safe-themes
    (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "29f71e46bdac127a29dad70563e9522a2f412d9ae0b20886655e508bafb03c85" "708509ac8287b4931223f62eb3f4edb9600b81e8ee35b1a8e26000bfd2daeb9f" "ce749c05ad35aad6eb0b696a28fcf0d84d577c2ba49deff5ed3e6ca3d937f8e3" "32d8d3b295d7b3f2b48b380dd071bd99a43e71d01ee36e2f853873520577a146" "c3d2ebc75f649ced804913db24fc1e1a4cc289911ff278c1fabca613276f3be2" "ffe5ae428ab62fbf939c84d1adda0d3651d2ea25a2ad553967caefd8fcdb163e" "38ba6a938d67a452aeb1dada9d7cdeca4d9f18114e9fc8ed2b972573138d4664" "dcd216940e2c0ec3297abfb899040ffa831396d479c9837689cfd46113519a86" default)))
+    ("bd46407400824b1e7344a1644c7018130179f0028f44c4a56077553480ed5818" "89318c1ecca44ebaa899ea9ec91738225b6b09ce6d7c79a05042e1558638eca6" "fd170f1ff6fe0a2c51561ba6670b7a12f9d4917cfbfdfe7634109a56388187e5" "1f00c1677582e9facc4385e06559dd4df4a8e245bed267d0ab6f6206858aa024" "bcad7b6a87d48fc15dc559dd52838f29f2034bb602b732a07b1f264d822b6d5e" "2567bb3d2ab518e74d4d3be762ec21818bdd5ac1bc77f13a1895c3c7972cd258" "2886cee2aa025304689883c370228658a27d7835618f2a02e51ec377ef564c6f" "4df82b89f2e8f3e9b147c985662d489161b220829065e1ec4cb1ff58f01ffd6d" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "29f71e46bdac127a29dad70563e9522a2f412d9ae0b20886655e508bafb03c85" "708509ac8287b4931223f62eb3f4edb9600b81e8ee35b1a8e26000bfd2daeb9f" "ce749c05ad35aad6eb0b696a28fcf0d84d577c2ba49deff5ed3e6ca3d937f8e3" "32d8d3b295d7b3f2b48b380dd071bd99a43e71d01ee36e2f853873520577a146" "c3d2ebc75f649ced804913db24fc1e1a4cc289911ff278c1fabca613276f3be2" "ffe5ae428ab62fbf939c84d1adda0d3651d2ea25a2ad553967caefd8fcdb163e" "38ba6a938d67a452aeb1dada9d7cdeca4d9f18114e9fc8ed2b972573138d4664" "dcd216940e2c0ec3297abfb899040ffa831396d479c9837689cfd46113519a86" default)))
  '(fci-rule-color "#3E3D31" t)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors

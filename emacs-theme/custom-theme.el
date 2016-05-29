@@ -55,6 +55,8 @@
         `(default ((,class (:background ,bg1 :foreground ,fg1))))
         ;; Powerline
         `(powerline-inactive1 ((,class (:foreground ,cyanbright))))
+        ;; Small circle number
+        `(spacemacs-motion-face ((,class (:foreground ,str :width ultra-condensed))))
         `(font-lock-builtin-face ((,class (:foreground ,builtin))))
         `(font-lock-comment-face ((,class (:foreground ,comment))))
         `(font-lock-negation-char-face ((,class (:foreground ,const))))
