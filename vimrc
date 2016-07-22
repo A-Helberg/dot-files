@@ -9,6 +9,7 @@ python del powerline_setup
 syntax on
 
 filetype plugin indent on
+filetype plugin on
 
 set autoindent                                         " Auto indent
 set encoding=utf-8
@@ -36,15 +37,19 @@ set showmatch                                          " show bracket matches { 
 set ttimeoutlen=100                                    " decrease timeout for faster insert with 'O'
 set list listchars=tab:»·,trail:·,extends:❯,precedes:❮ " show extra space characters
 set clipboard=unnamed                                  " use the system clipboard
-set nobackup                                           " Do not keep a backup file
+set nobackup                                           " Do not keep a backup file, since most things are in source control
 set backspace=indent,eol,start                         " Allow backspacing over everything in insert mode
 set mouse=a                                            " Enable mouse in all modes
+set autoread                                           " Automatically read when a file is chnged from the outside
+
 
 
 set showbreak=↪
 
 
 set background=dark
+highlight NonText ctermbg=none
+hi Normal ctermbg=none
 colorscheme base16-railscasts
 
 highlight clear SignColumn
@@ -97,3 +102,25 @@ endif
 " Store temporary files in a central spot
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+" =============================================================================
+" Key bindings
+" =============================================================================
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+let mapleader=","
+nnoremap ; :
+
+" Clear searches
+nmap <silent> ,/ :nohlsearch<CR>
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Toggle paste mode with F5
+set pastetoggle=<F5>
