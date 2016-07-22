@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vim-open-alternate"]
 	path = vim/bundle/vim-open-alternate
 	url = https://github.com/cyphactor/vim-open-alternate.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
