@@ -48,9 +48,9 @@ set showbreak=↪
 
 
 set background=dark
+colorscheme base16-railscasts-transparent
 highlight NonText ctermbg=none
 hi Normal ctermbg=none
-colorscheme base16-railscasts
 
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
