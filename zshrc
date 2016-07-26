@@ -91,7 +91,7 @@ export PATH="/usr/local/sbin:/usr/local/lib/python2.7/site-packages:/usr/local/b
 # # Always work in a tmux session if tmux is installed
 if which tmux 2>&1 >/dev/null; then
   if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
-      tmux attach -t hack || tmux new -s hack; exit
+      tmux attach -t hack || tmux new -s hack -c ~/Projects; exit
   fi
 fi
 
