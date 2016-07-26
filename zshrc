@@ -164,7 +164,7 @@ gitclean() {
 alias em='/usr/local/bin/emacs'
 alias gti='git'
 alias be='bundle exec'
-alias bubble='bundle'
+alias bubble='bundle exec bundle install'
 alias gm='git commit -m '
 
 
