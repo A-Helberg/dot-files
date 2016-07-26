@@ -158,7 +158,7 @@ gitgrep() {
 }
 
 gitclean() {
-  git remote prune origin
+  git branch --merged $1 | grep -v '\* $1' | xargs -n 1 git branch -d
 }
 
 alias em='/usr/local/bin/emacs'
