@@ -167,5 +167,3 @@ alias be='bundle exec'
 alias bubble='bundle exec bundle install'
 alias gm='git commit -m '
 
-
-nvm use 5
