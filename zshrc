@@ -6,8 +6,13 @@ export VIRTUAL_ENV_DISABLE_PROMPT='1'
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-export GOPATH=~/GOPATH
-export PATH="$GOPATH/bin:$PATH"
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=$HOME/GOPATH
+# default GO Path props ~/go
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 
 # Set name of the theme to load.
@@ -15,7 +20,7 @@ export PATH="$GOPATH/bin:$PATH"
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="sun-and-moon"
+ZSH_THEME="agnostercustom"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,7 +60,7 @@ ZSH_THEME="sun-and-moon"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,16 +94,14 @@ export PATH="/usr/local/sbin:/usr/local/lib/python2.7/site-packages:/usr/local/b
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # # Always work in a tmux session if tmux is installed
-if which tmux 2>&1 >/dev/null; then
-  if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
-      tmux attach -t hack || tmux new -s hack -c ~/Projects; exit
-  fi
-fi
+#if which tmux 2>&1 >/dev/null; then
+#  if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
+#      tmux attach -t hack || tmux new -s hack -c ~/Projects; exit
+#  fi
+# fi
 
 export PIP_REQUIRE_VIRTUALENV="" pip "$@"
 
-# Setup rbenv shell integration
-eval "$(rbenv init -)"
 
 schedprompt() {
   emulate -L zsh
@@ -137,6 +140,8 @@ function gpr {
   open "https://github.com/$repo/compare/$branch?expand=1"
 }
 
+alias gdm='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
 # Shortcut to run Postgress
 pgserver() {
     postgres -D /usr/local/var/postgres
@@ -167,3 +172,15 @@ alias be='bundle exec'
 alias bubble='bundle exec bundle install'
 alias gm='git commit -m '
 
+# Setup rbenv shell integration
+eval "$(rbenv init -)"
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+
+# added by travis gem
+[ -f /Users/andre/.travis/travis.sh ] && source /Users/andre/.travis/travis.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+# if [ -f '/Users/andre/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/andre/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+#if [ -f '/Users/andre/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/andre/google-cloud-sdk/completion.zsh.inc'; fi

@@ -49,3 +49,9 @@
 [submodule "vim/bundle/vim-slim"]
 	path = vim/bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
+[submodule "vim/bundle/vim-ember-hbs"]
+	path = vim/bundle/vim-ember-hbs
+	url = https://github.com/joukevandermaas/vim-ember-hbs.git
+[submodule "vim/bundle/alchemist.vim"]
+	path = vim/bundle/alchemist.vim
+	url = git@github.com:slashmili/alchemist.vim.git
