@@ -4,6 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Virtualenv should not prepend the virtualenv, since we are displaying it in the right prompt in the custom theme below
 export VIRTUAL_ENV_DISABLE_PROMPT='1'
 
+export PATH="$HOME/.rbenv/bin:$PATH"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
@@ -174,7 +175,6 @@ alias gm='git commit -m '
 
 # Setup rbenv shell integration
 eval "$(rbenv init -)"
-export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 
 # added by travis gem
 [ -f /Users/andre/.travis/travis.sh ] && source /Users/andre/.travis/travis.sh
