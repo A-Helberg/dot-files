@@ -172,6 +172,9 @@ alias gti='git'
 alias be='bundle exec'
 alias bubble='bundle exec bundle install'
 alias gm='git commit -m '
+alias fuck_all_this_whitespace='find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E "s/[[:space:]]*$//"'
+alias raisl=rails
+alias k=kubectl
 
 # Setup rbenv shell integration
 eval "$(rbenv init -)"
