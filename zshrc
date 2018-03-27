@@ -149,7 +149,7 @@ gitclean() {
 }
 
 alias gti='git'
-# alias gm='git commit -m '
+alias gm='git commit -m '
 
 # ---------------------------------
 # Misc. Shortcuts
