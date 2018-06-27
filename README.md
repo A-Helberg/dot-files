@@ -13,3 +13,7 @@ To enable better scrolling on OSX and Iterm2
 Enable the option under Preferences -> Profiles -> Terminal called:
 
 `Save lines to scrollback when an app status bar is present`
+
+## ZSH
+
+`git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions`

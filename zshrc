@@ -18,7 +18,6 @@ eval "$(rbenv init -)"
 REACT_EDITOR=emacs
 export PATH="/Users/andre/Library/Android/sdk/platform-tools:$PATH"
 
-
 # NVM ------------------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -166,7 +165,6 @@ alias bubble='bundle exec bundle install'
 alias fuck_all_this_whitespace='find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E "s/[[:space:]]*$//"'
 alias raisl=rails
 alias k=kubectl
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/andre/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/andre/Downloads/google-cloud-sdk/path.zsh.inc'; fi
