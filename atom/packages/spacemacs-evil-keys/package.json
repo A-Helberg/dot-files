@@ -1,0 +1,64 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+        "spec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/apm-install-dir-118518-23019-xp35bx.046iwtrzfr"
+    ]
+  ],
+  "_from": "../d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+  "_id": "spacemacs-evil-keys@0.2.0",
+  "_inCache": true,
+  "_location": "/spacemacs-evil-keys",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+    "spec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+  "_shasum": "2bd5834f86dcbafd9e0c7f08d072351f8a6acd6b",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-118518-23019-1vppsty.fui8bprpb9/package.tgz",
+  "_where": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/apm-install-dir-118518-23019-xp35bx.046iwtrzfr",
+  "bugs": {
+    "url": "https://github.com/jackcasey/atom-spacemacs-evil-keys/issues"
+  },
+  "dependencies": {},
+  "description": "Adds spacemacs style evil-mode keybindings.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/jackcasey/atom-spacemacs-evil-keys#readme",
+  "keywords": [
+    "spacemacs",
+    "evil-mode",
+    "vim"
+  ],
+  "license": "MIT",
+  "main": "./lib/spacemacs-evil-keys",
+  "name": "spacemacs-evil-keys",
+  "optionalDependencies": {},
+  "readme": "# spacemacs-evil-keys package\n\nAdds sequence-style key-bindings with space as the leader key for a bunch of commands. These are based on and, where possible, identical to the default evil mode key-bindings found in spacemacs.\n\nThis package includes key-bindings for various built in atom operations and for some third party plugins that I use. (Most of which are by the marvellous [t9md](https://atom.io/users/t9md))\n\n* vim-mode-plus\n* atom-fuzzy-grep\n* atom-ctags\n* cursor-history\n* recent-finder\n* git-plus\n* git-time-machine\n* easy-motion-redux\n* narrow\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackcasey/atom-spacemacs-evil-keys.git"
+  },
+  "version": "0.2.0"
+}

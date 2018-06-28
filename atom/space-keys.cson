@@ -1,0 +1,156 @@
+a:
+  name: 'Application'
+  subkeys:
+    a:
+      name: 'About'
+      command: 'application:about'
+    p:
+      name: 'Add Project Folder'
+      command: 'application:add-project-folder'
+c:
+  name: 'Configuration'
+  subkeys:
+    c:
+      name: 'Open Config'
+      command: 'application:open-your-config'
+    i:
+      name: 'Open Init Script'
+      command: 'application:open-your-init-script'
+    k:
+      name: 'Open Keymap'
+      command: 'application:open-your-keymap'
+    n:
+      name: 'Open Snippets'
+      command: 'application:open-your-snippets'
+    p:
+      name: 'Show Preferences'
+      command: 'application:show-preferences'
+    s:
+      name: 'Show Settings'
+      command: 'application:show-settings'
+    t:
+      name: 'Open Stylesheet'
+      command: 'application:open-your-stylesheet'
+f:
+  name: 'Files'
+  subkeys:
+    l:
+      name: 'Open Folder'
+      command: 'application:open-folder'
+    n:
+      name: 'New File'
+      command: 'application:new-file'
+    o:
+      name: 'Open File'
+      command: 'application:open-file'
+    s:
+      name: 'Save File'
+      command: 'core:save'
+    v:
+      name: 'Save File As'
+      command: 'core:save-as'
+    A:
+      name: 'Save All'
+      command:'window:save-all'
+p:
+  name: 'Panes'
+  subkeys:
+    c:
+      name: 'Close Pane'
+      command: 'pane:close'
+    l:
+      name: 'Move Item Left'
+      command: 'pane:move-item-left'
+    r:
+      name: 'Move Item Right'
+      command: 'pane:move-item-right'
+    s:
+      name: 'Save Items'
+      command: 'pane:save-items'
+    t:
+      name: 'Active Item to Top'
+      command: 'pane:move-item-to-top-of-stack'
+    u:
+      name: 'Reopen Closed Item'
+      command: 'pane:reopen-closed-item'
+    x:
+      name: 'Close Other Pane Items'
+      command: 'pane:close-other-items'
+    '-':
+      name: 'Decrease Pane Size'
+      command: 'pane:decrease-size'
+    '+':
+      name: 'Increase Pane Size'
+      command: 'pane:increase-size'
+    space:
+      name: 'Pane Splits'
+      subkeys:
+        d:
+          name: 'Split down'
+          command: 'pane:split-down'
+        l:
+          name: 'Split left'
+          command: 'pane:split-left'
+        r:
+          name: 'Split right'
+          command: 'pane:split-right'
+        u:
+          name: 'Split up'
+          command: 'pane:split-up'
+r:
+  name: 'Projects'
+  subkeys:
+    f:
+      name: 'Show Project Find'
+      command: 'project-find:show'
+    t:
+      name: 'Toggle Project Find'
+      command: 'project-find:toggle'
+s:
+  name: 'Settings View'
+  subkeys:
+    i:
+      name: 'Install Packages and Themes'
+      command: 'settings-view:install-packages-and-themes'
+    t:
+      name: 'Change Themes'
+      command: 'settings-view:change-themes'
+    u:
+      name: 'Check for updates'
+      command: 'settings-view:check-for-package-updates'
+t:
+  name: 'Tabs'
+  subkeys:
+    A:
+      name: 'Close All Tabs'
+      command: 'tabs:close-all-tabs'
+    c:
+      name: 'Close Tab'
+      command: 'tabs:close-tab'
+    O:
+      name: 'Close Other Tabs'
+      command: 'tabs:close-other-tabs'
+    s:
+      name:  'Close Saved Tabs'
+      command: 'tabs:close-saved-tabs'
+w:
+  name: 'Window'
+  subkeys:
+    h:
+      name:  'Focus pane left'
+      command: 'window:focus-pane-on-left'
+    j:
+      name:  'Focus pane down'
+      command: 'window:focus-pane-on-below'
+    k:
+      name:  'Focus pane up'
+      command: 'window:focus-pane-on-above'
+    l:
+      name:  'Focus pane right'
+      command: 'window:focus-pane-on-right'
+    '/':
+      name:  'Split pane right'
+      command: 'pane:split-right-and-copy-active-item'
+    f:
+      name: 'Hello there'
+      command: 'pane:split-right-and-copy-active-item'

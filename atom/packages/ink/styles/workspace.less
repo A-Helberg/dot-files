@@ -1,0 +1,51 @@
+@import "syntax-variables";
+@import "ui-variables";
+@import "icons.less";
+
+.ink-workspace {
+
+  -webkit-user-select: none;
+  cursor: default;
+  overflow: auto;
+  white-space: pre;
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+
+  * { vertical-align: top; }
+
+  .context > .header {
+    font-family: @font-family;
+    font-size: 1.1em;
+    color: @text-color;
+    padding: 5px;
+  }
+
+  .context table {
+    background-color: @syntax-background-color;
+    color: @syntax-text-color;
+
+    td {
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+
+    td.name {
+      padding-left: 10px;
+      width: 30%;
+    }
+
+    td.value {
+      padding-left: 10px;
+      width: 100%;
+    }
+
+    // https://github.com/atom/autocomplete-plus/blob/master/styles/autocomplete.less
+    td.icon {
+      .icon-mixin;
+    }
+
+    .editor.editor-colors {
+      background: none;
+      padding: 0;
+    }
+  }
+}

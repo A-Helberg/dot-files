@@ -1,0 +1,151 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+@font-face {
+  font-family: 'Hack';
+  src: url('atom://proton-mode/fonts/hack/eot/hack-regular-webfont.eot');
+  src: url('atom://proton-mode/fonts/hack/eot/hack-regular-webfont.eot') format('embedded-opentype'), url('atom://proton-mode/fonts/hack/woff2/hack-regular-webfont.woff2') format('woff2'), url('atom://proton-mode/fonts/hack/woff/hack-regular-webfont.woff') format('woff'), url('atom://proton-mode/fonts/hack/web-ttf/hack-regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('atom://proton-mode/fonts/hack/eot/hack-bold-webfont.eot');
+  src: url('atom://proton-mode/fonts/hack/eot/hack-bold-webfont.eot') format('embedded-opentype'), url('atom://proton-mode/fonts/hack/woff2/hack-bold-webfont.woff2') format('woff2'), url('atom://proton-mode/fonts/hack/woff/hack-bold-webfont.woff') format('woff'), url('atom://proton-mode/fonts/hack/web-ttf/hack-bold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('atom://proton-mode/fonts/hack/eot/hack-italic-webfont.eot');
+  src: url('atom://proton-mode/fonts/hack/eot/hack-italic-webfont.eot') format('embedded-opentype'), url('atom://proton-mode/fonts/hack/woff2/hack-italic-webfont.woff2') format('woff2'), url('atom://proton-mode/fonts/hack/woff/hack-italic-webfont.woff') format('woff'), url('atom://proton-mode/fonts/hack/web-ttf/hack-italic-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('atom://proton-mode/fonts/hack/eot/hack-bolditalic-webfont.eot');
+  src: url('atom://proton-mode/fonts/hack/eot/hack-bolditalic-webfont.eot') format('embedded-opentype'), url('atom://proton-mode/fonts/hack/woff2/hack-bolditalic-webfont.woff2') format('woff2'), url('atom://proton-mode/fonts/hack/woff/hack-bolditalic-webfont.woff') format('woff'), url('atom://proton-mode/fonts/hack/web-ttf/hack-bolditalic-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+.proton-which-key {
+  font-size: 13px;
+  font-family: Hack;
+}
+
+.proton-which-key-container {
+  min-height: 100px;
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  list-style: none;
+
+  -webkit-column-width: 300px;
+}
+
+.proton-which-key-item {
+    width: 300px;
+}
+
+.proton-which-key p {
+  margin: 0;
+  padding: 0;
+}
+
+.proton-which-key {
+  .proton-key {
+    color: @text-color-info;
+  }
+  .proton-key-category {
+    color: @text-color-warning;
+  }
+  .proton-key-action {
+    color: @text-color-success;
+  }
+  .proton-chain-key {
+    color: @ui-site-color-1;
+  }
+  .proton-chain-category {
+    color: @ui-site-color-4;
+  }
+  .proton-which-key-footer {
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.proton-modal-panel {
+  font-family: Hack;
+  font-size: 13px;
+  max-height: 500px;
+  overflow-y: scroll;
+  margin: 20px 0;
+  padding: 0px 12px !important;
+
+  h2 {
+    color: @text-color-success;
+    margin: 0 !important;
+  }
+
+  table {
+    width: 100%;
+    margin: 10px 0 !important;
+  }
+
+  tr {
+    line-height: 20px;
+  }
+
+  .process-status {
+    text-align: right;
+    width: 45px;
+  }
+
+  .proton-status-ok {
+    color: @text-color-success;
+  }
+
+  .proton-status-progress {
+    color: @text-color-info;
+  }
+
+  .proton-status-package {
+    color: @text-color-info;
+  }
+
+  .proton-status-package-count {
+    color: @text-color-info;
+  }
+}
+
+// other overrides
+atom-panel.modal.tab-switcher {
+  display: none !important;
+}
+
+.proton-mode {
+  &.proton-which-key-active {
+    atom-pane-container {
+      opacity: 0.5;
+    }
+    atom-panel-container {
+      &.right, &.left {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.proton-mode::shadow .cursor {
+  border-color: red;
+  border-width: 10px;
+}

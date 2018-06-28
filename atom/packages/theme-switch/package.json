@@ -1,0 +1,141 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+        "spec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/apm-install-dir-11849-23520-1snmn2y.j2gzfo5hfr"
+    ]
+  ],
+  "_from": "../d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+  "_id": "theme-switch@0.6.0",
+  "_inCache": true,
+  "_location": "/theme-switch",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+    "spec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+  "_shasum": "40302e2e66433f26a1834a792bafdcca315ea6cb",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/d-11849-23520-kjdudw.zcg5koi529/package.tgz",
+  "_where": "/private/var/folders/jk/skg5jxwn6r5bp0_6v0zr4zkc0000gn/T/apm-install-dir-11849-23520-1snmn2y.j2gzfo5hfr",
+  "activationCommands": {
+    "atom-workspace": [
+      "theme-switch:next",
+      "theme-switch:prev",
+      "theme-switch:next-dark",
+      "theme-switch:prev-dark",
+      "theme-switch:next-light",
+      "theme-switch:prev-light",
+      "theme-switch:clip-current-theme",
+      "theme-switch:add-to-profiles",
+      "theme-switch:add-to-dark-profiles",
+      "theme-switch:add-to-light-profiles"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/t9md/atom-theme-switch/issues"
+  },
+  "configSchema": {
+    "profiles": {
+      "order": 1,
+      "description": "list of 'ui and syntax pair' used for `theme-switch:next`, `theme-switch:prev`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "atom-dark-ui atom-dark-syntax",
+        "one-dark-ui one-dark-syntax",
+        "atom-light-ui atom-light-syntax",
+        "one-light-ui one-light-syntax"
+      ]
+    },
+    "darkProfiles": {
+      "order": 2,
+      "description": "used for `theme-switch:next-dark`, `theme-switch:prev-dark`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "atom-dark-ui atom-dark-syntax",
+        "one-dark-ui one-dark-syntax"
+      ]
+    },
+    "lightProfiles": {
+      "order": 3,
+      "description": "used for `theme-switch:next-light`, `theme-switch:prev-light`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "atom-light-ui atom-light-syntax",
+        "one-light-ui one-light-syntax"
+      ]
+    },
+    "logToConsole": {
+      "order": 4,
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "dependencies": {},
+  "description": "Switch theme quckly",
+  "devDependencies": {
+    "prettier": "^1.10.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/t9md/atom-theme-switch#readme",
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "theme-switch",
+  "optionalDependencies": {},
+  "readme": "# theme-switch\n\nSwitch theme(ui and syntax pair).\n\n![gif](https://raw.githubusercontent.com/t9md/t9md/2391f495870160c16ee560e0ee5dc913f0df74d4/img/atom-theme-switch.gif)\n\n# Commands\n\n- `theme-switch:next`: Set next theme in `profiles`\n- `theme-switch:prev`: Set previous theme in `profiles`\n- `theme-switch:next-dark`: Set next theme in `darkProfiles`\n- `theme-switch:prev-dark`: Set previous theme in `darkProfiles`\n- `theme-switch:next-light`: Set next theme in `lightProfiles`\n- `theme-switch:prev-light`: Set previous theme in `lightProfiles`\n- `theme-switch:add-to-profiles`: Add currently active theme to `profiles`\n- `theme-switch:add-to-dark-profiles`: Add currently active theme to `darkProfiles`\n- `theme-switch:add-to-light-profiles`: Add currently active theme to `lightProfiles`\n- `theme-switch:clip-current-theme`: Save current active theme to clipboard\n\n# Keymap\n\nNo keymap by default.  \nKeymap example is here.\n```coffeescript\n'atom-workspace:not([mini])':\n  'cmd-shift-up': 'theme-switch:prev'\n  'cmd-shift-down': 'theme-switch:next'\n```\n\n# Configuration\n\nSet \"ui and syntax theme pair\" as member of each theme-set.\nYou can add currently active \"ui and syntax theme\" to each profile by `add-to-profiles`, `add-to-dark-profiles` and `add-to-light-profiles`.\nTechnically \"ui and syntax theme pair\" can be built by `atom.config.get('core.themes').join(\" \")`.\n\ne.g.\n\n```coffeescript\n\"theme-switch\":\n  profiles: [\n    \"atom-dark-ui spacegray-dark-syntax\"\n    \"atom-dark-ui atom-dark-syntax\"\n    \"atom-light-ui atom-light-syntax\"\n  ],\n  darkProfiles: [\n    \"atom-dark-ui atom-dark-syntax\"\n    \"one-dark-ui one-dark-syntax\"\n  ],\n  lightProfiles: [\n    \"atom-light-ui atom-light-syntax\"\n    \"one-light-ui one-light-syntax\"\n  ]\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t9md/atom-theme-switch.git"
+  },
+  "scripts": {
+    "lint": "standard lib/*.js lib/**/*.js spec/*.js",
+    "prettier": "prettier --write --no-semi --print-width=120 --no-bracket-spacing --trailing-comma=es5 'lib/**/*.js' 'spec/*.js'",
+    "test": "apm test",
+    "watch": "fswatch -0 spec lib | xargs -0 -n1 -I{} apm test"
+  },
+  "standard": {
+    "env": {
+      "atomtest": true,
+      "browser": true,
+      "jasmine": true,
+      "node": true
+    },
+    "globals": [
+      "atom"
+    ],
+    "ignore": [
+      "spec/fixtures/*"
+    ]
+  },
+  "version": "0.6.0"
+}
