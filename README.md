@@ -1,5 +1,9 @@
 # dot-files
 
+## Setup
+Check ./bin/setup for an overview of how to install some of the files.
+I use iTerm2 you'll find the color profile and the Monaco for Powerline font in the relavent directories and they should be enabled installed manually.
+
 ## Vim
 Vim uses pathogen, after installing pathogen, you should run this to get all the plugins
 `git submodule update`
