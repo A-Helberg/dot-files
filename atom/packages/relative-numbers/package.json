@@ -40,7 +40,7 @@
     "url": "https://github.com/justmoon/relative-numbers/issues"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.19"
   },
   "description": "Relative line numbers for Atom",
   "devDependencies": {},
