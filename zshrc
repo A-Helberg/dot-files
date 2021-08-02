@@ -10,28 +10,17 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+. $HOME/.asdf/asdf.sh
+. ~/.asdf/plugins/java/set-java-home.zsh
+
 # Customize to your needs...
 #
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# RBENV ----------------------------
-#export PATH="$HOME/.rbenv/bin:$PATH"
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-export LDFLAGS="-L/usr/local/opt/readline/lib"
-export CPPFLAGS="-I/usr/local/opt/readline/include"
-export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
-
-eval "$(rbenv init -)"
-
-# NVM ----------------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # GO ----------------------------
-export PATH="$PATH:/usr/local/go/bin"
-export GOHOME="$HOME/go"
+# export PATH="$PATH:/usr/local/go/bin"
+# export GOHOME="$HOME/go"
 
 alias k='kubectl'
 
@@ -44,6 +33,8 @@ alias gst='git status'
 alias ggp='git push origin HEAD:refs/for/master'
 alias gm='git commit -m '
 alias gca='git commit --amend'
+alias gco='git checkout'
+alias gbl='git branch --sort=-committerdate'
 
 # Outputs the name of the current branch
 # Usage example: git pull origin $(git_current_branch)
@@ -81,4 +72,5 @@ alias gbdm='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch
 export PATH="/usr/local/opt/libpcap/bin:$PATH"
 alias dc=docker-compose
 
-export DOCKER_HOST_IP=$(ip route | grep docker0 | awk '{print $9}')
+unalias rm
+
