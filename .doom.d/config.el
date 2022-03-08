@@ -77,6 +77,9 @@
 
 (ace-window-display-mode)
 
+(after! lsp-rust
+  (setq lsp-rust-server 'rust-analyzer))
+
 (map! :leader
       :desc "Switch window" "SPC" #'ace-window
       :desc "treemacs" "0" #'treemacs-select-window
