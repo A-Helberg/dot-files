@@ -78,7 +78,8 @@
 (ace-window-display-mode)
 
 (after! lsp-rust
-  (setq lsp-rust-server 'rust-analyzer))
+  (setq lsp-rust-server 'rust-analyzer)
+  (setq lsp-rust-analyzer-cargo-load-out-dirs-from-check t))
 
 (map! :leader
       :desc "Switch window" "SPC" #'ace-window
