@@ -81,8 +81,8 @@
   (setq lsp-rust-server 'rust-analyzer)
   (setq lsp-rust-analyzer-cargo-load-out-dirs-from-check t))
 
+(setq doom-localleader-key ",") 
+
 (map! :leader
       :desc "Switch window" "SPC" #'ace-window
-      :desc "treemacs" "0" #'treemacs-select-window
-      ;;(:prefix ("SPC" . "ace-window")
-       )
+      :desc "treemacs" "0" #'treemacs-select-window)
