@@ -86,3 +86,5 @@
 (map! :leader
       :desc "Switch window" "SPC" #'ace-window
       :desc "treemacs" "0" #'treemacs-select-window)
+
+(add-to-list 'auto-mode-alist '("\\.cljd\\'" . clojure-mode))
