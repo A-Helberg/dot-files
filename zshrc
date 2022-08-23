@@ -27,6 +27,9 @@ alias k='kubectl'
 # Haskell Stack
 export PATH="$PATH:/Users/andre/.local/bin"
 
+# Flutter
+export PATH="$PATH:$HOME/.pub-cache/bin"
+
 
 # GIT ----------------------------
 alias gst='git status'
@@ -55,6 +58,11 @@ function current_branch() {
 function gpoc {
   echo Pushing $(current_branch)
   git push origin $(current_branch)
+}
+
+function gfpoc {
+  echo FORCE Pushing $(current_branch)
+  git push -f  --set-upstream origin $(current_branch)
 }
 
 # Default git pull from current branch
