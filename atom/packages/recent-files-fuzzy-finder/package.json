@@ -43,7 +43,7 @@
   },
   "description": "Find recently opened files easier",
   "devDependencies": {
-    "coffeelint": "2.0.6",
+    "coffeelint": "2.1.0",
     "fs-extra": "4.0.2",
     "temp": "0.8.3"
   },
