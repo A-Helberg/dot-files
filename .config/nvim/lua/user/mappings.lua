@@ -21,6 +21,7 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>w|"] = { ":vsplit<cr>", desc = "Split Vertical" },
+    ["<leader>wv"] = { ":vsplit<cr>", desc = "Split Vertical" },
     ["<leader>w-"] = { ":split<cr>", desc = "Split Horizontal" },
     ["<leader>w"] = { name = "Window", desc = "Window" },
   },
