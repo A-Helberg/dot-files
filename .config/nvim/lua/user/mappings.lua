@@ -11,7 +11,10 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr)
+            require("astronvim.utils.buffer").close(bufnr)
+          end)
       end,
       desc = "Pick to close",
     },
@@ -23,6 +26,7 @@ return {
     ["<leader>w|"] = { ":vsplit<cr>", desc = "Split Vertical" },
     ["<leader>wv"] = { ":vsplit<cr>", desc = "Split Vertical" },
     ["<leader>w-"] = { ":split<cr>", desc = "Split Horizontal" },
+    ["<leader>ws"] = { ":split<cr>", desc = "Split Horizontal" },
     ["<leader>w"] = { name = "Window", desc = "Window" },
   },
   t = {
