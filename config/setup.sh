@@ -104,6 +104,7 @@ apps=(
   packer
   vault
   nomad
+  starship
 )
 
 brew install ${apps[@]}

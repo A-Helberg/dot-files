@@ -37,12 +37,15 @@ end
 
 ## Starship prompt
 if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
+   source ("/usr/bin/env" starship init fish --print-full-init | psub)
 end
 
 
 ## Advanced command-not-found hook
-source /usr/share/doc/find-the-command/ftc.fish
+
+if test -e /usr/share/doc/find-the-command/ftc.fish
+  source /usr/share/doc/find-the-command/ftc.fish
+end
 
 
 ## Functions
@@ -154,5 +157,7 @@ if status --is-interactive && type -q fastfetch
 end
 
 alias vim=nvim
-source /opt/asdf-vm/asdf.fish
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+set asdf_path $(asdf info | grep ASDF_DIR | string replace "ASDF_DIR=" "")
+source "$asdf_path/asdf.fish"
 export EDITOR=vim
