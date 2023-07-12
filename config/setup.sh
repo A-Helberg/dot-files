@@ -26,8 +26,6 @@ if [ ! -f "$HOME/.ssh/id_rsa" ]; then
 fi
 
 
-
-
 echo "Installing xcode-stuff"
 xcode-select --install
 
@@ -65,13 +63,13 @@ brew cleanup
 echo "Installing homebrew cask"
 brew install caskroom/cask/brew-cask
 
+echo "Making Projects directory""
+mkdir ~/Projects 2>/dev/null
+
 echo "Copying dotfiles from Github"
-cd ~
-mkdir Projects
-cd Projects
-git clone git@github.com:A-Helberg/dot-files
-cd dot-files
-sh symdotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+git clone --bare git@github.com:A-Helberg/dot-files $HOME/.cfg
+config checkout
 
 # Apps
 apps=(
@@ -92,8 +90,6 @@ apps=(
   karabiner-elements
 )
 
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
 echo "installing apps with Cask..."
 brew install --cask ${apps[@]}
 
@@ -129,10 +125,10 @@ dockutil --remove "App Store"
 
 brew cleanup
 
-
 defaults write com.apple.dock static-only -bool TRUE
 defaults write com.apple.dock mineffect suck
 defaults write com.apple.dock largesize -int 512
+
 # set key repeat to quick
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1
