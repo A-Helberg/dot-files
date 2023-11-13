@@ -105,7 +105,7 @@ alias la='exa -a --color=always --group-directories-first --icons'  # all files 
 alias ll='exa -l --color=always --group-directories-first --icons'  # long format
 alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
 alias l.='exa -ald --color=always --group-directories-first --icons .*' # show only dotfiles
-alias ip='ip -color'
+#alias ip='ip -color'
 
 # Replace some more things with better alternatives
 alias cat='bat --style header --style snip --style changes --style header'
@@ -157,7 +157,13 @@ if status --is-interactive && type -q fastfetch
 end
 
 alias vim=nvim
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-set asdf_path $(asdf info | grep ASDF_DIR | string replace "ASDF_DIR=" "")
-source "$asdf_path/asdf.fish"
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+if test -e ~/.asdf/asdf.fish
+  source ~/.asdf/asdf.fish
+else
+ set asdf_path $(asdf info | grep ASDF_DIR | string replace "ASDF_DIR=" "")
+ source "$asdf_path/asdf.fish"
+end
 export EDITOR=vim
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
