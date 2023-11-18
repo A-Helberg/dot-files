@@ -1,3 +1,6 @@
 [submodule "/Users/andre/.asdf"]
 	path = /Users/andre/.asdf
 	url = https://github.com/asdf-vm/asdf.git
+[submodule "/home/andre/.config/emacs"]
+	path = /home/andre/.config/emacs
+	url = https://github.com/doomemacs/doomemacs

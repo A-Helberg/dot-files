@@ -37,7 +37,7 @@ end
 
 ## Starship prompt
 if status --is-interactive
-   source ("/usr/bin/env" starship init fish --print-full-init | psub)
+    source ("/usr/bin/env" starship init fish --print-full-init | psub)
 end
 
 
@@ -160,10 +160,21 @@ alias vim=nvim
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
-else
- set asdf_path $(asdf info | grep ASDF_DIR | string replace "ASDF_DIR=" "")
- source "$asdf_path/asdf.fish"
 end
+
+if test -e /opt/asdf-vm/asdf.fish
+  source /opt/asdf-vm/asdf.fish
+end
+
+if test -e $HOME/.asdf/plugins/java/set-java-home.fish
+ source $HOME/.asdf/plugins/java/set-java-home.fish
+end
+
+if test -e $HOME/.cargo/bin
+  fish_add_path $HOME/.cargo/bin
+end
+
+
 export EDITOR=vim
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
