@@ -167,7 +167,18 @@ if test -e /opt/asdf-vm/asdf.fish
 end
 
 if test -e $HOME/.asdf/plugins/java/set-java-home.fish
- source $HOME/.asdf/plugins/java/set-java-home.fish
+ asdf current 2>&1 | grep -e "java\s+\d"
+
+ switch (uname)
+    case Linux
+      if test asdf current 2>&1 | grep -P "java\s+\d"
+        source $HOME/.asdf/plugins/java/set-java-home.fish
+      end
+    case Darwin
+      if test asdf current 2>&1 | grep -e "java\s+\d"
+        source $HOME/.asdf/plugins/java/set-java-home.fish
+      end
+  end
 end
 
 if test -e $HOME/.cargo/bin
