@@ -1,0 +1,13 @@
+[2024-02-27 11:42:02.227] [info] Using configuration file /home/andre/.config/waybar/config
+[2024-02-27 11:42:02.234] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+[2024-02-27 11:42:02.234] [info] Using CSS file /home/andre/.config/waybar/style.css
+[2024-02-27 11:42:02.266] [warning] module sway/mode: Disabling module "sway/mode", Socket path is empty
+[2024-02-27 11:42:02.274] [warning] module sway/window: Disabling module "sway/window", Socket path is empty
+sh: line 1: /home/andre/.config/waybar/mediaplayer.sh: No such file or directory
+[2024-02-27 11:42:02.287] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2024-02-27 11:42:02.297] [warning] module sway/language: Disabling module "sway/language", Socket path is empty
+[2024-02-27 11:42:02.515] [info] Bar configured (width: 3840, height: 53) for output: DP-1
+
+(waybar:187514): Gtk-CRITICAL **: 11:42:02.530: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:187514): Gtk-CRITICAL **: 11:42:02.530: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
