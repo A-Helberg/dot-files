@@ -27,7 +27,7 @@
     pkgs.packer
     pkgs.nomad
 
-    pkgs.# terminal utils
+    # terminal utils
     pkgs.stow
     pkgs.starship
     pkgs.eza
@@ -95,6 +95,30 @@
     EDITOR = "nvim";
   };
 
+  programs.git = {
+    enable = true;
+    userName = "Andre Helberg";
+    userEmail = "helberg.andre@gmail.com";
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  dconf.settings = {
+    "org/gnome/shell" = {
+        disable-user-extensions = false;
+        disabled-extensions = "disabled";
+        enabled-extensions = [
+          "native-window-placement@gnome-shell-extensions.gcampax.github.com"
+          "pop-shell@system76.com"
+          "caffeine@patapon.info"
+          "hidetopbar@mathieu.bidon.ca"
+          "gsconnect@andyholmes.github.io"
+        ];
+        favorite-apps = ["firefox.desktop" "kitty.desktop"];
+        had-bluetooth-devices-setup = true;
+        remember-mount-password = false;
+        welcome-dialog-last-shown-version = "42.4";
+      };
+  };
 }
