@@ -27,6 +27,10 @@
     pkgs.packer
     pkgs.nomad
 
+    # network tools
+    pkgs.mtr
+    pkgs.iperf3
+
     # terminal utils
     pkgs.stow
     pkgs.starship
@@ -38,9 +42,12 @@
     (pkgs.callPackage ./hv.nix {})
     (pkgs.callPackage ./nomad-pack.nix {})
 
-    # languages
+    # Dev
+    pkgs.oauth2c
     pkgs.rustc
     pkgs.cargo
+    pkgs.jq
+    pkgs.oxker
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
