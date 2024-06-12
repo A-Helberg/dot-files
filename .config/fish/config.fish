@@ -156,26 +156,27 @@ if status --is-interactive && type -q fastfetch
    fastfetch --load-config neofetch
 end
 
-alias vim=nvim
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 if test -e ~/.asdf/asdf.fish
   source ~/.asdf/asdf.fish
 end
-
 if test -e /opt/asdf-vm/asdf.fish
   source /opt/asdf-vm/asdf.fish
 end
 
+#if test -e ~/.nix-profile/share/asdf-vm/asdf.fish
+#  source ~/.nix-profile/share/asdf-vm/asdf.fish
+#end
+
+
 if test -e $HOME/.asdf/plugins/java/set-java-home.fish
- asdf current 2>&1 | grep -e "java\s+\d"
 
  switch (uname)
     case Linux
-      if test asdf current 2>&1 | grep -P "java\s+\d"
+      if test asdf current 2>&1 | grep -P "java\s+\d+"
         source $HOME/.asdf/plugins/java/set-java-home.fish
       end
     case Darwin
-      if test asdf current 2>&1 | grep -e "java\s+\d"
+      if test asdf current 2>&1 | grep -e "java\s+\d+"
         source $HOME/.asdf/plugins/java/set-java-home.fish
       end
   end
